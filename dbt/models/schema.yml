@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_cities
+    description: "Staging table for cities from OpenWeather API"
+    columns:
+      - name: city_id
+        description: "Unique city identifier"
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_weather
+    description: "Staging table for weather observations"
+    columns:
+      - name: city_id
+        description: "Foreign key to stg_cities"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_cities')
+              field: city_id

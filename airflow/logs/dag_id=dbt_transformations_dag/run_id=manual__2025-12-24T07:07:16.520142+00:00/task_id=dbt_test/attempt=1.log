@@ -1,0 +1,25 @@
+[2025-12-24T07:07:22.162+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-24T07:07:22.184+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_transformations_dag.dbt_test manual__2025-12-24T07:07:16.520142+00:00 [queued]>
+[2025-12-24T07:07:22.187+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_transformations_dag.dbt_test manual__2025-12-24T07:07:16.520142+00:00 [queued]>
+[2025-12-24T07:07:22.187+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-24T07:07:22.195+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dbt_test> on 2025-12-24 07:07:16.520142+00:00
+[2025-12-24T07:07:22.202+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=359) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-24T07:07:22.201+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dbt_transformations_dag', 'dbt_test', 'manual__2025-12-24T07:07:16.520142+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dbt_transformations_dag.py', '--cfg-path', '/tmp/tmpvnep8aku']
+[2025-12-24T07:07:22.203+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask dbt_test
+[2025-12-24T07:07:22.202+0000] {standard_task_runner.py:64} INFO - Started process 360 to run task
+[2025-12-24T07:07:22.230+0000] {task_command.py:426} INFO - Running <TaskInstance: dbt_transformations_dag.dbt_test manual__2025-12-24T07:07:16.520142+00:00 [running]> on host 9ee1a54ce25d
+[2025-12-24T07:07:22.267+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_transformations_dag' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2025-12-24T07:07:16.520142+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-24T07:07:16.520142+00:00'
+[2025-12-24T07:07:22.268+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-24T07:07:22.275+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-24T07:07:22.276+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt && dbt test --profiles-dir .']
+[2025-12-24T07:07:22.282+0000] {subprocess.py:86} INFO - Output:
+[2025-12-24T07:07:23.494+0000] {subprocess.py:93} INFO - [0m07:07:23  Running with dbt=1.11.2
+[2025-12-24T07:07:23.625+0000] {subprocess.py:93} INFO - [0m07:07:23  Registered adapter: postgres=1.10.0
+[2025-12-24T07:07:23.981+0000] {subprocess.py:93} INFO - [0m07:07:23  Found 3 models, 2 sources, 463 macros
+[2025-12-24T07:07:23.985+0000] {subprocess.py:93} INFO - [0m07:07:23  Nothing to do. Try checking your model configs and model specification args
+[2025-12-24T07:07:24.984+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-24T07:07:24.987+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-24T07:07:25.013+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dbt_transformations_dag, task_id=dbt_test, run_id=manual__2025-12-24T07:07:16.520142+00:00, execution_date=20251224T070716, start_date=20251224T070722, end_date=20251224T070725
+[2025-12-24T07:07:25.045+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-12-24T07:07:25.069+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-24T07:07:25.070+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
