@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: openweather_raw
+    schema: raw
+    tables:
+      - name: cities
+      - name: weather
